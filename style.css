@@ -29,17 +29,18 @@ section{
     margin: 0 auto;
     box-shadow: 4px 4px 6px #0000003e;
 }
-.boxdrink, .boxdessert, .boxspecial,.boxcombo{
+.box{
     background-color: #a9b288;
     width: 100px;
     height: 160px;
     margin-bottom: 15px;
-    margin-top: 5px;    
+    margin-top: 5px;
+    box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.463);    
 }
 
 p{
     color: #FEFAE0;
-    font: small-caps 12px cursive;
+    font: small-caps 15px cursive;
 }
 
 img{
@@ -49,3 +50,9 @@ img{
     margin-left: 10px;
 }
 
+footer{
+    color: #FEFAE0;
+    text-align: center;
+    font-style: italic;
+
+}
