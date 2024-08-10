@@ -1,0 +1,36 @@
+/*
+#5F6F52 dark green
+#A9B388 light oliva
+#FEFAE0 cream
+#B99470 light brown
+*/
+
+body{
+    background-color: #5F6F52;
+}
+header{
+    color: #b99470;
+    text-align: center;
+    font: small-caps bold 16px/2 cursive;
+    
+}
+
+section{
+    background-color: #FEFAE0;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 15px;
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 4px 4px 6px #0000003e;
+    div{
+        background-color: #a9b288;
+        width: 100px;
+        height: 160px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        margin-top: 2px;
+        margin-left: 2px;
+    }
+
+}
