@@ -20,6 +20,50 @@ header{
     grid-template-columns: 1fr 1fr; /* Divide em duas colunas iguais */
 }
 
+.tab-container {
+    margin: 20px;
+}
+
+.tab-menu {
+    overflow: hidden;
+}
+
+.tab-menu button {
+    background-color: #b99470;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+    color: #5F6F52;
+    border: none;
+}
+
+.tab-menu button:hover {
+    background-color: #a9b288;
+}
+
+.tab-menu button.active {
+    background-color: #FEFAE0;
+    color: #b99470;
+}
+
+/*caixa principal do fundo*/
+.tabcontent {
+    display: none;
+    background-color: #FEFAE0;
+    padding: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 4px 4px 6px #0000003e;
+    border-top: none;
+}
+
+/*
 section{
     background-color: #FEFAE0;
     height: fit-content;
@@ -29,6 +73,8 @@ section{
     margin: 0 auto;
     box-shadow: 4px 4px 6px #0000003e;
 }
+    */
+
 .box{
     background-color: #a9b288;
     width: 100px;
