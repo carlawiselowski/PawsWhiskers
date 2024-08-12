@@ -13,7 +13,7 @@ maior ou igual - min
 
 @media (min-width: 401px) and (max-width: 500px) {
     .tab-menu button {
-        font-size: 8px;  
+        font-size: 10px;  
     }
     .container {
         display: grid;
