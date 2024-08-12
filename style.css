@@ -11,7 +11,7 @@ body{
 header{
     color: #b99470;
     text-align: center;
-    font: small-caps bold 16px/2 cursive;
+    font: small-caps bold 20px/2 cursive;
     
 }
 
@@ -22,6 +22,8 @@ header{
 
 .tab-container {
     margin: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .tab-menu {
@@ -101,4 +103,9 @@ footer{
     text-align: center;
     font-style: italic;
 
+}
+
+.info{
+    color: #5F6F52;
+    font: small-caps 13px cursive;
 }

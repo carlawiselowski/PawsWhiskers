@@ -1,7 +1,7 @@
 
 
 //evento de zoom 
-const items = document.querySelectorAll('.box');
+    const items = document.querySelectorAll('.box');
 
 // Função para aumentar o quadro
 function enlargeItem(event) {
