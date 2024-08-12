@@ -3,11 +3,36 @@
 #A9B388 light oliva
 #FEFAE0 cream
 #B99470 light brown
+
+
+
+menor ou igual - max
+maior ou igual - min
 */
+@media (max-width: 500px) {
+    .tab-menu button {
+        font-size: 7px;  
+    }
+}
+
+/* Estilo para telas pequenas (entre 101px e 600px) */
+@media (min-width: 501px) and (max-width: 599px) {
+    .tab-menu button {
+        font-size: 10px;  
+    }
+}
+
+@media (min-width: 600px){
+    .tab-menu button {
+        font-size: 16px;
+    }
+    
+}
 
 body{
     background-color: #5F6F52;
 }
+
 header{
     color: #b99470;
     text-align: center;
@@ -38,7 +63,6 @@ header{
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
-    font-size: 16px;
     font-weight: bold;
     color: #5F6F52;
     border: none;
