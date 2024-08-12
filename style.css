@@ -42,7 +42,7 @@ header{
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Divide em duas colunas iguais */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Divide em 4 colunas iguais */
 }
 
 .tab-container {
