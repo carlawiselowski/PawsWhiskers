@@ -31,7 +31,7 @@ h3{
     margin-left: 40px;
     font: small-caps bold 20px/2;
 }
-.container-cats{
+.container-animals{
     display: grid;
     grid-template-columns: 1fr 1fr; /* Divide em 4 colunas iguais */
 }
