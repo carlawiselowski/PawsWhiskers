@@ -13,18 +13,32 @@ maior ou igual - min
     .tab-menu button {
         font-size: 7px;  
     }
-}
-
-/* Estilo para telas pequenas (entre 101px e 600px) */
-@media (min-width: 501px) and (max-width: 599px) {
-    .tab-menu button {
-        font-size: 10px;  
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Divide em 4 colunas iguais */
     }
 }
 
-@media (min-width: 600px){
+/* Estilo para telas pequenas (entre 101px e 600px) */
+@media (min-width: 501px) and (max-width: 549px) {
+    .tab-menu button {
+        font-size: 10px;  
+    }
+    .container {
+        display: grid;
+        outline: none;
+        grid-template-columns: 1fr 1fr; /* Divide em 4 colunas iguais */
+    }
+}
+
+@media (min-width: 550px){
     .tab-menu button {
         font-size: 16px;
+    }
+    .container {
+        display: grid;
+        outline: none;
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* Divide em 4 colunas iguais */
     }
     
 }
@@ -38,11 +52,6 @@ header{
     text-align: center;
     font: small-caps bold 20px/2 cursive;
     
-}
-
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* Divide em 4 colunas iguais */
 }
 
 .tab-container {
