@@ -8,3 +8,30 @@ header{
     font: small-caps bold 20px/2 cursive;
     
 }
+section{
+    background-color: #FEFAE0;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 20px;
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 4px 4px 6px #0000003e;
+}
+
+img{
+    height: 180px;
+    width: 150px;
+    margin-bottom: 20px;
+    border: 4px solid #632d1a;
+}
+
+h3{
+    color: #b99470;
+    text-align: start;
+    margin-left: 40px;
+    font: small-caps bold 20px/2;
+}
+.container-cats{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide em 4 colunas iguais */
+}
