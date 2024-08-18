@@ -10,18 +10,17 @@ menor ou igual - max
 maior ou igual - min
 */
 
-
-@media (min-width: 401px) and (max-width: 500px) {
+@media (min-width: 401px) and (max-width: 699px) {
     .tab-menu button {
         font-size: 10px;  
     }
     .container {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Divide em 2 colunas iguais */
+        grid-template-columns: 1fr; /* Divide em 1 coluna */
     }
 }
 
-@media (min-width: 501px) and (max-width: 599px) {
+@media (min-width: 700px) and (max-width: 1199px) {
     .tab-menu button {
         font-size: 12px;  
     }
@@ -31,17 +30,7 @@ maior ou igual - min
     }
 }
 
-@media (min-width: 600px) and (max-width: 699px) {
-    .tab-menu button {
-        font-size: 14px;
-    }
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr; /* Divide em 3 colunas iguais */
-    }
-}
-
-@media (min-width: 700px){
+@media (min-width: 1200px) {
     .tab-menu button {
         font-size: 16px;
     }
@@ -121,8 +110,8 @@ section{
 .box{
     background-color: #a9b288;
     border: none;
-    width: 100px;
-    height: 160px;
+    width: 200px;
+    height: 260px;
     margin-bottom: 15px;
     margin-top: 5px;
     margin-left: auto;
@@ -135,8 +124,8 @@ p{
     font: small-caps 13px cursive;
 }
 img{
-    width: 80px;
-    height: 100px;
+    width: 160px;
+    height: 200px;
     margin-top: 10px;
 
 }
