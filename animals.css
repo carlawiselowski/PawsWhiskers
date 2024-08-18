@@ -1,3 +1,23 @@
+@media (min-width: 401px) and (max-width: 899px) {
+    .tab-menu button {
+        font-size: 10px;  
+    }
+    .container-animals {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Divide em 1 coluna */
+    }
+}
+
+@media (min-width: 900px) {
+    .tab-menu button {
+        font-size: 12px;  
+    }
+    .container-animals {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* Divide em 2 colunas iguais */
+    }
+}
+
 body{
     background-color: #5F6F52;
 }
@@ -30,8 +50,4 @@ h3{
     text-align: start;
     margin-left: 40px;
     font: small-caps bold 20px/2;
-}
-.container-animals{
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Divide em 4 colunas iguais */
 }
