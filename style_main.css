@@ -40,7 +40,7 @@ maior ou igual - min
     }
 }
 
-.cart{
+.user{
     background: transparent;
     border: none;
     color: transparent;
@@ -48,6 +48,23 @@ maior ou igual - min
     position: fixed;
     top: 20px;
     right: 20px;    
+
+    .perfil{
+        width: 25px;
+        height: 25px;
+    }
+
+}
+
+
+.cart{
+    background: transparent;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 60px;    
 
     .carrinho{
         width: 25px;
