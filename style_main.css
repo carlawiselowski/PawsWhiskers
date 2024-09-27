@@ -45,9 +45,9 @@ maior ou igual - min
     border: none;
     color: transparent;
     cursor: pointer;
+    position: fixed;
     top: 20px;
-    right: 20px;
-    
+    right: 20px;    
 
     .carrinho{
         width: 25px;
