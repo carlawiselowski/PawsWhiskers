@@ -40,6 +40,22 @@ maior ou igual - min
     }
 }
 
+.cart{
+    background: transparent;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+    
+
+    .carrinho{
+        width: 25px;
+        height: 25px;
+    }
+
+}
+
 body{
     background-color: #5F6F52;
 }
