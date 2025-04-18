@@ -1,0 +1,156 @@
+/*
+body{
+    background-color: #5F6F52;
+}
+
+header{
+    color: #b99470;
+    text-align: center;
+    font: small-caps bold 20px/2 cursive;
+    
+}
+section{
+    background-color: #FEFAE0;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 20px;
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 4px 4px 6px #0000003e;
+}
+
+img{
+    height: 180px;
+    width: 150px;
+    margin-bottom: 20px;
+    border: 4px solid #632d1a;
+}
+
+h3{
+    color: #b99470;
+    text-align: start;
+    margin-left: 40px;
+    font: small-caps bold 20px/2;
+}
+
+*/
+  
+body{
+    background-color: #5F6F52;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+}
+.back{
+    background: transparent;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+    position: left;
+    margin: 10px;
+    top: 20px;
+    right: 20px;    
+
+    .carrinho{
+        width: 25px;
+        height: 25px;
+    }
+
+}
+header{
+    color: #b99470;
+    text-align: center;
+    font: small-caps bold 20px/2 cursive;
+    
+}
+.all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    background: #FEFAE0;
+    padding: 40px;
+    border-radius: 12px;
+    width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+  
+  .login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #A9B388;
+    font: small-caps bold 30px cursive;
+    
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    font-size: 14px;
+    color: #B99470;
+    margin-bottom: 5px;
+    font: small-caps 13px cursive;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 3px solid #B99470;
+    border-radius: 6px;
+    outline: none;
+    transition: border 0.3s ease;
+  }
+  
+.input-group input:focus {
+    border-color: #A9B388;
+  }
+  
+.forgot {
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+    color: #5F6F52;
+    text-decoration: none;
+    font: small-caps 13px cursive;
+}
+  
+  .login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #A9B388;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+   
+  }
+  
+  .login-btn:hover {
+    background: #B99470
+  }
+  
+  .signup {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    font: small-caps 13px cursive;
+    color: #B99470;
+
+  }
+  
+  .signup a {
+    color: #5F6F52;
+    text-decoration: none;
+    font: small-caption;
+    font-weight: bold;
+  }
+
+ 

@@ -87,6 +87,7 @@ maior ou igual - min
 
 body{
     background-color: #5F6F52;
+    
 }
 
 header{
@@ -222,9 +223,9 @@ footer{
     margin-bottom: 15px;
     margin-top: 5px;
    /* box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.463); */
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
     
 }
