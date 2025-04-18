@@ -21,6 +21,22 @@
 body{
     background-color: #5F6F52;
 }
+.back{
+    background: transparent;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+    position: left;
+    margin: 10px;
+    top: 20px;
+    right: 20px;    
+
+    .carrinho{
+        width: 25px;
+        height: 25px;
+    }
+
+}
 
 header{
     color: #b99470;
@@ -38,7 +54,7 @@ section{
     box-shadow: 4px 4px 6px #0000003e;
 }
 
-img{
+.animal{
     height: 180px;
     width: 150px;
     margin-bottom: 20px;
