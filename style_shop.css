@@ -1,0 +1,43 @@
+  
+body{
+    background-color: #5F6F52;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+}
+
+.back{
+    background: transparent;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+    position: left;
+    margin: 10px;
+    top: 20px;
+    right: 20px;    
+
+    .carrinho{
+        width: 25px;
+        height: 25px;
+    }
+
+}
+header{
+    color: #b99470;
+    text-align: center;
+    font: small-caps bold 20px/2 cursive;
+    
+}
+.all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    background: #FEFAE0;
+    padding: 40px;
+    border-radius: 12px;
+    width: 1000px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
