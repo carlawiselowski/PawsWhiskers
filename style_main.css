@@ -171,6 +171,13 @@ section{
     box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.463);    
 }
 
+.box1{
+    background-color:#FEFAE0;
+    border: none;
+    width: 170px;
+    height: 200px;
+}
+
 p{
     color: #FEFAE0;
     font: small-caps 13px cursive;
@@ -241,3 +248,11 @@ footer{
     background: #B99470
   }
 
+  .signup {
+    text-align: right;
+    font-size: 14px;
+    margin-top: 10px;
+    font: small-caps 13px cursive;
+    color: #B99470;
+
+  }

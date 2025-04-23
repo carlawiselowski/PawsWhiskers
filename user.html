@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws & Whiskers - user</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='style_user.css'>
+   
+   <script>function toggleItem(element) {
+        const item = element.parentElement;
+        item.classList.toggle("open");
+      }
+      </script>    
+
+</head>
+<body>
+
+    <header>
+        <h1 class="title"> Paws & Whiskers </h1>
+    </header>
+
+    <div class="back">
+        <button class="back" onclick="window.location.href='main.html'">
+            <img class="carrinho" src="./img_geral/seta.png">
+        </button>
+    </div>
+
+    <div class="all">
+        <div class="container">
+            <div class="menu-item">
+                <div class="menu-header" onclick="toggleItem(this)">
+                  <i class="icon">↓</i> Account
+                </div>
+                <div class="menu-content">
+                  manage your personal information, email, and username.
+                </div>
+              </div>
+          
+              <div class="menu-item">
+                <div class="menu-header" onclick="toggleItem(this)">
+                  <i class="icon">↓</i> Change Password
+                </div>
+                <div class="menu-content">
+                update your current password to keep your account secure.
+
+                    <div class="input-group">
+                    <label for="password">current password</label>
+                    <input type="password" id="password" placeholder="Type your current password" required>
+                    </div>
+        
+                    <div class="input-group">
+                    <label for=" confirm password">new password</label>
+                    <input type="password" id="confirm_password" placeholder="Type your new password" required>
+                    </div>
+
+                    <button type="submit" class="login-btn">save</button>
+            
+                    </div>
+              </div>
+          
+              <div class="menu-item">
+                <div class="menu-header" onclick="toggleItem(this)">
+                  <i class="icon">↓</i> Delete Account
+                </div>
+                <div class="menu-content">
+                  permanently delete your account and all associated data.
+                  
+                <button type="submit" class="login-btn">delete</button>
+                
+            </div>
+              </div>
+        </div>
+    </div>
+    
+</body>
+</html>

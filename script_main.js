@@ -2,6 +2,8 @@
 
 //evento de zoom 
     const items = document.querySelectorAll('.box');
+    const items1 = document.querySelectorAll('.box1');
+
 
 // Função para aumentar o quadro
 function enlargeItem(event) {
@@ -17,6 +19,11 @@ function resetItem(event) {
 
 // Adiciona os event listeners para cada item
 items.forEach(item => {
+    item.addEventListener('mouseenter', enlargeItem);
+    item.addEventListener('mouseleave', resetItem);
+});
+
+items1.forEach(item => {
     item.addEventListener('mouseenter', enlargeItem);
     item.addEventListener('mouseleave', resetItem);
 });
