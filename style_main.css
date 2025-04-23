@@ -133,7 +133,8 @@ header{
 .tabcontent {
     display: none;
     background-color: #FEFAE0;
-    padding: 20px;
+    padding: 50px;
+    padding-right: 180px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -215,17 +216,23 @@ footer{
     }
 
 }
+
 .product{
-    background-color: #a9b288;
-    border: none;
     width: 80px;
     height: 20px;
     margin-bottom: 15px;
     margin-top: 5px;
-   /* box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.463); */
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    border-bottom-left-radius: 6px;
-    border-top-left-radius: 6px;
-    
-}
+    background: #A9B388;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+   
+  }
+  
+  .product:hover {
+    background: #B99470
+  }
+
