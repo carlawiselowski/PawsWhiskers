@@ -43,6 +43,12 @@ body{
     height: 100vh;
 
 }
+footer{
+  color: #5F6F52;
+  text-align: center;
+  font-style: italic;
+
+}
 .back{
     background: transparent;
     border: none;
@@ -152,5 +158,7 @@ header{
     font: small-caption;
     font-weight: bold;
   }
+
+
 
  
