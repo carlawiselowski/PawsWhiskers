@@ -133,14 +133,19 @@ header{
 .tabcontent {
     display: none;
     background-color: #FEFAE0;
-    padding: 50px;
-    padding-right: 180px;
+    padding: 20px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     box-shadow: 4px 4px 6px #0000003e;
     border-top: none;
+
 }
+.modeloproduto{
+    padding: 30px;
+    padding-right: 160px;
+}
+
 
 /*
 section{
