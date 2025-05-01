@@ -67,3 +67,22 @@ h3{
     margin-left: 40px;
     font: small-caps bold 20px/2;
 }
+
+.product{
+    width: 80px;
+    height: 20px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    background: #A9B388;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+   
+  }
+  
+  .product:hover {
+    background: #B99470
+  }
