@@ -5,7 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paws & Whiskers - user</title>
     <link rel='stylesheet' type='text/css' media='screen' href='style_user_login.css'>
-    <script src=''></script>
+    <script>
+    const form = document.getElementById('loginForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); // Impede o envio padrão
+
+      const username = form.username.value;
+      const password = form.password.value;
+
+      const res = await fetch('/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+      });
+
+      if (res.ok) {
+        window.location.href = '/main.html'; // Redireciona manualmente
+      } else {
+        const msg = await res.text();
+        alert(msg); // Mostra erro
+      }
+    });
+  </script>
+</script>
 </head>
 <body>
     <div class="back">
