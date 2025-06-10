@@ -6,9 +6,13 @@ const db = require('./db');
 const app = express();
 const PORT = 3000;
 
+// Middleware
 app.use(cors());
-app.use(bodyParser.json());
-app.use(express.static('public')); // Para servir o user_login.html
+app.use(bodyParser.urlencoded({ extended: true })); // ← ESSENCIAL para formulário HTML
+app.use(bodyParser.json()); // ← necessário se usar fetch/json
+app.use(express.static('public')); // ← onde estão seus HTML, CSS, imagens etc.
+
+
 
 // Rota de login
 app.post('/login', (req, res) => {
