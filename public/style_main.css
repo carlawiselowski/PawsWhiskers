@@ -58,7 +58,7 @@ maior ou igual - min
     color: transparent;
     cursor: pointer;
     position: fixed;
-    top: 20px;
+    top: 15px;
     right: 20px;    
 
     .perfil{
@@ -75,8 +75,8 @@ maior ou igual - min
     color: transparent;
     cursor: pointer;
     position: fixed;
-    top: 20px;
-    right: 60px;    
+    top: 80px;
+    right: 30px;    
 
     .carrinho{
         width: 25px;
@@ -250,9 +250,19 @@ footer{
 
 .signup {
     text-align: right;
-    font-size: 14px;
+    font-size: 8px;
     margin-top: 10px;
     font: small-caps 13px cursive;
     color: #B99470;
-
+    background-color: #FEFAE0;
+    cursor: pointer;
+    position: fixed;
+    top: 120px;
+    right: 20px;   
+    border-radius: 25px; 
   }
+
+text-syle{
+    color: #FEFAE0;
+    font: small-caps 8px cursive;
+}

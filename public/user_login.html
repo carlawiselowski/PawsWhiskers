@@ -6,9 +6,11 @@
     <title>Paws & Whiskers - user</title>
     <link rel='stylesheet' type='text/css' media='screen' href='style_user_login.css'>
     <script>
+  window.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('loginForm');
+    
     form.addEventListener('submit', async (e) => {
-      e.preventDefault(); // Impede o envio padrão
+      e.preventDefault();
 
       const username = form.username.value;
       const password = form.password.value;
@@ -22,12 +24,18 @@
       });
 
       if (res.ok) {
-        window.location.href = '/main.html'; // Redireciona manualmente
+        const userData = await res.json();
+        localStorage.setItem('loggedIn', 'true');
+        localStorage.setItem('username', userData.username);
+        window.location.href = '/main.html';
       } else {
         const msg = await res.text();
-        alert(msg); // Mostra erro
+        alert(msg);
       }
     });
+  });
+</script>
+
 </script>
 </head>
 <body>

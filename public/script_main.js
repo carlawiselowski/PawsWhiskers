@@ -52,3 +52,41 @@ function openTab(evt, tabName) {
 
 // Mostrar a primeira aba por padrão ao carregar a página
 document.getElementsByClassName("tablinks")[0].click();
+
+//login ou nao
+
+const loggedIn = localStorage.getItem('loggedIn') === 'true';
+const username = localStorage.getItem('username');
+
+const icon = document.getElementById('profile-icon');
+const text = document.getElementById('user-text');
+const link = document.getElementById('user-link');
+const logoutBtn = document.getElementById('logout-btn');
+
+if (icon && text && link && logoutBtn) {
+  if (loggedIn && username) {
+    icon.src = './img_geral/perfil.png';
+    text.textContent = `Olá, ${username}`;
+    link.href = 'user.html';
+    logoutBtn.style.display = 'inline-block';
+
+    text.classList.add('text-syle');   // <- Aplica o estilo verde
+    text.classList.remove('text-syle'); // <- Remove o estilo de login
+    
+  } else {
+    icon.src = './img_geral/perfil.png';
+    text.textContent = 'Login';
+    link.href = 'user_login.html';
+    logoutBtn.style.display = 'none';
+
+     text.classList.add('text-syle');   // <- Aplica o estilo verde
+    text.classList.remove('text-syle'); // <- Remove o estilo de login
+    
+  }
+}
+
+function logout() {
+  localStorage.removeItem('loggedIn');
+  localStorage.removeItem('username');
+  window.location.href = 'user_login.html';
+}

@@ -12,12 +12,17 @@
             <button class="cart" onclick="window.location.href='shop.html'">
                 <img class="carrinho" src="./img_geral/cart_shopping.png">
             </button>
-
-            <button class="user" onclick="window.location.href='user.html'">
-                <img class="perfil" src="./img_geral/perfil.png">
+            <button class="user" onclick="handleUserClick()">
+                <img id="profile-icon" class="perfil" src="./img_geral/perfil.png">
+                <a id="user-link">
+                <p id="user-text">Login</p> <!-- Aqui aparecerá o nome -->
+            </a>
             </button>
+            <button class="signup" id="logout-btn" onclick="logout()" style="display: none;">Logout</button>
 
-            <p class="signup"> <a href="user_login.html">login</a></p>
+
+
+            
 
     </div>
    

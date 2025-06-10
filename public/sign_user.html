@@ -19,43 +19,41 @@
     </header>
     <div class="all">
         <div class="container">
-            <form class="login-form">
-
+        <form class="login-form" action="/register" method="POST">
             <h2>sign up</h2>
-           
-            <div class="input-group">
-            <label for="full name">full name</label>
-            <input type="text" id="name" placeholder="Type your full name" required>
-            </div>
 
-            <div class="input-group">
+        <div class="input-group">
+            <label for="name">full name</label>
+            <input type="text" id="name" name="name" placeholder="Type your full name" required>
+        </div>
+
+        <div class="input-group">
             <label for="username">username</label>
-            <input type="text" id="username" placeholder="Type your username" required>
-            </div>
+            <input type="text" id="username" name="username" placeholder="Type your username" required>
+        </div>
 
-            <div class="input-group">
+        <div class="input-group">
             <label for="email">email</label>
-            <input type="email" id="email" placeholder="Type your email" required>    
-            </div>
+            <input type="email" id="email" name="email" placeholder="Type your email" required>    
+        </div>
 
-            <div class="input-group">
+        <div class="input-group">
             <label for="address">address</label>
-            <input type="text" id="address" placeholder="Type your address (rua, n°,bairro)" required>
-            </div>
+            <input type="text" id="address" name="address" placeholder="Type your address (rua, n°, bairro)" required>
+        </div>
 
-            <div class="input-group">
+        <div class="input-group">
             <label for="password">password</label>
-            <input type="password" id="password" placeholder="Type your password" required>
-            </div>
+            <input type="password" id="password" name="password" placeholder="Type your password" required>
+         </div>
 
-            <div class="input-group">
-            <label for=" confirm password">confirm password</label>
-            <input type="password" id="confirm_password" placeholder="Repeat password" required>
-            </div>
+        <div class="input-group">
+            <label for="confirm_password">confirm password</label>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Repeat password" required>
+        </div>
 
-            <button type="submit" class="login-btn">Create</button>
-
-            </form>
+        <button type="submit" class="login-btn">Create</button>
+        </form>
         </div>
     </div>
     <footer>

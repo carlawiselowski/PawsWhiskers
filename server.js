@@ -22,12 +22,36 @@ app.post('/login', (req, res) => {
 
   db.query(query, [username, password], (err, results) => {
     if (err) return res.status(500).send('Erro no servidor.');
+
     if (results.length > 0) {
-      res.redirect('/main.html'); // Redireciona o usuário
-    }  else {
-      // Falha no login: redireciona de volta com erro
-      res.send('<h2>Usuário ou senha incorretos.</h2><a href="/user_login.html">Voltar</a>');
+      // Em vez de só enviar "sucesso", envia o nome do usuário como JSON
+      res.json({ username: results[0].username });
+    } else {
+      res.status(401).send('Usuário ou senha incorretos.');
     }
+  });
+});
+
+
+//rota de cadastro
+app.post('/register', (req, res) => {
+  const { name, username, email, address, password, confirm_password } = req.body;
+
+  if (password !== confirm_password) {
+    return res.send('As senhas não coincidem.');
+  }
+
+  const query = 'INSERT INTO users (name, username, email, address, password) VALUES (?, ?, ?, ?, ?)';
+
+  db.query(query, [name, username, email, address, password], (err, result) => {
+    if (err) {
+      if (err.code === 'ER_DUP_ENTRY') {
+        return res.send('Usuário já existe.');
+      }
+      return res.status(500).send('Erro ao cadastrar usuário.');
+    }
+
+    res.redirect('/user_login.html');
   });
 });
 

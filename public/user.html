@@ -6,10 +6,20 @@
     <title>Paws & Whiskers - user</title>
     <link rel='stylesheet' type='text/css' media='screen' href='style_user.css'>
    
-   <script>function toggleItem(element) {
+   <script>
+   function toggleItem(element) {
         const item = element.parentElement;
         item.classList.toggle("open");
       }
+
+
+      const loggedIn = localStorage.getItem('loggedIn') === 'true';
+
+      if (!loggedIn) {
+        // Redireciona para login se não estiver logada
+        window.location.href = 'user_login.html';
+      }
+
       </script>    
 
 </head>
