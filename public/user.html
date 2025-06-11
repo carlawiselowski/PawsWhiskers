@@ -20,6 +20,40 @@
         window.location.href = 'user_login.html';
       }
 
+      document.getElementById('change-password-btn').onclick = () => {
+  const username = localStorage.getItem('username');
+  const currentPassword = document.getElementById('password').value;
+  const newPassword = document.getElementById('confirm_password').value;
+
+  fetch('/change-password', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, currentPassword, newPassword })
+  })
+  .then(res => res.text())
+  .then(alert)
+  .catch(err => alert('Erro: ' + err));
+};
+
+document.getElementById('delete-account-btn').onclick = () => {
+  const username = localStorage.getItem('username');
+  const password = prompt('Digite sua senha para confirmar:');
+
+  fetch('/delete-account', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, password })
+  })
+  .then(res => res.text())
+  .then(msg => {
+    alert(msg);
+    if (msg.includes('sucesso')) {
+      localStorage.clear();
+      window.location.href = 'user_login.html';
+    }
+  })
+  .catch(err => alert('Erro: ' + err));
+};
       </script>    
 
 </head>
@@ -37,16 +71,6 @@
 
     <div class="all">
         <div class="container">
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleItem(this)">
-                  <i class="icon">↓</i> Account
-                </div>
-                <div class="menu-content">
-                  manage your personal information, email, and username.
-                  <p>   </p>
-                  <button type="submit" class="login-btn">save</button>
-                </div>
-              </div>
           
               <div class="menu-item">
                 <div class="menu-header" onclick="toggleItem(this)">
@@ -65,7 +89,7 @@
                     <input type="password" id="confirm_password" placeholder="Type your new password" required>
                     </div>
 
-                    <button type="submit" class="login-btn">save</button>
+                    <button id="change-password-btn" class="login-btn">save</button>
             
                     </div>
               </div>
@@ -77,7 +101,7 @@
                 <div class="menu-content">
                   permanently delete your account and all associated data.
                   <p>  </p>
-                <button type="submit" class="login-btn">delete</button>
+                <button id="delete-account-btn" class="login-btn">delete</button>
                 
             </div>
               </div>

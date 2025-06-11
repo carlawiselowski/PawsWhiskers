@@ -55,6 +55,44 @@ app.post('/register', (req, res) => {
   });
 });
 
+app.post('/change-password', (req, res) => {
+  const { username, currentPassword, newPassword } = req.body;
+
+  const checkQuery = 'SELECT * FROM users WHERE username = ? AND password = ?';
+  const updateQuery = 'UPDATE users SET password = ? WHERE username = ?';
+
+  db.query(checkQuery, [username, currentPassword], (err, results) => {
+    if (err) return res.status(500).send('Erro ao verificar senha atual.');
+    if (results.length === 0) {
+      return res.status(401).send('Senha atual incorreta.');
+    }
+
+    db.query(updateQuery, [newPassword, username], (err, result) => {
+      if (err) return res.status(500).send('Erro ao atualizar senha.');
+      res.send('Senha alterada com sucesso.');
+    });
+  });
+});
+
+// Rota para deletar conta
+app.post('/delete-account', (req, res) => {
+  const { username, password } = req.body;
+
+  const checkQuery = 'SELECT * FROM users WHERE username = ? AND password = ?';
+  const deleteQuery = 'DELETE FROM users WHERE username = ?';
+
+  db.query(checkQuery, [username, password], (err, results) => {
+    if (err) return res.status(500).send('Erro ao verificar credenciais.');
+    if (results.length === 0) {
+      return res.status(401).send('Usuário ou senha incorretos.');
+    }
+
+    db.query(deleteQuery, [username], (err, result) => {
+      if (err) return res.status(500).send('Erro ao deletar conta.');
+      res.send('Conta deletada com sucesso.');
+    });
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
