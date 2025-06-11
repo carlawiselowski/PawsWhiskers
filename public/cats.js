@@ -34,9 +34,9 @@ function renderCategoria(categoria) {
                     <p></p>
                     <img class="animal" src="${produto.imagem}">
                     <p></p>
+                    <h3>R$ ${produto.preco} </h3>
                     <button class="product" onclick="comprarProduto('${produto.nome}', ${produto.preco}, '${produto.imagem}')">buy</button>
                     <p></p>
-                    <button class="product">info</button>
                 </div>
             `;
         });
@@ -53,8 +53,8 @@ function renderProdutos(containerId = 'container-produtos') {
     div.align = 'center';
     div.innerHTML = `
       <img src="${produto.imagem}">
+      <h3>R$ ${produto.preco} </h3>
       <button class="product" onclick="comprarProduto('${produto.nome}', ${produto.preco}, '${produto.imagem}')">buy</button>
-      <button class="product">info</button>
     `;
     container.appendChild(div);
   });
