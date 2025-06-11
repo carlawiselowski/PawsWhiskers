@@ -13,17 +13,62 @@
         <h1 class="title"> Paws & Whiskers </h1>
     </header>
 
-    <div class="back">
+        <div class="back">
         <button class="back" onclick="window.location.href='main.html'">
             <img class="carrinho" src="./img_geral/seta.png">
         </button>
     </div>
 
     <div class="all">
-        <div class="container">
-            <p>Não há produto na sacola</p>
+        <div class="container" id="cart-container">
+            <p id="empty-message">Não há produto na sacola</p>
         </div>
     </div>
+
+    <script>
+        const container = document.getElementById('cart-container');
+        const emptyMessage = document.getElementById('empty-message');
+        const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+        if (carrinho.length > 0) {
+            emptyMessage.style.display = 'none';
+            let total = 0;
+
+            carrinho.forEach(produto => {
+                const div = document.createElement('div');
+                div.classList.add('produto');
+                div.innerHTML = `
+                <div class="produto-content">
+                <img src="${produto.imagem}" alt="${produto.nome}" class="produto-imagem">
+                <div class="produto-info">
+                <p><strong>${produto.nome}</strong></p>
+                <p>Quantidade: ${produto.quantidade}</p>
+                <p>Preço unitário: R$ ${produto.preco.toFixed(2)}</p>
+                <p>Subtotal: R$ ${(produto.quantidade * produto.preco).toFixed(2)}</p>
+                </div>
+                </div>
+                `;
+                container.appendChild(div);
+
+                total += produto.quantidade * produto.preco;
+            });
+
+            const totalDiv = document.createElement('div');
+            totalDiv.classList.add('total');
+            totalDiv.textContent = `Total: R$ ${total.toFixed(2)}`;
+            container.appendChild(totalDiv);
+
+            const finalizarBtn = document.createElement('button');
+            finalizarBtn.textContent = 'Finalizar Compra';
+            finalizarBtn.classList.add('finalizar-btn');
+            finalizarBtn.onclick = () => {
+                alert('Compra finalizada com sucesso!');
+                localStorage.removeItem('carrinho');
+                window.location.reload();
+            };
+            container.appendChild(finalizarBtn);
+        }
+    </script>
     
 </body>
 </html>

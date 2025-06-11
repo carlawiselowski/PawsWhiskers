@@ -62,6 +62,7 @@ const icon = document.getElementById('profile-icon');
 const text = document.getElementById('user-text');
 const link = document.getElementById('user-link');
 const logoutBtn = document.getElementById('logout-btn');
+const cartIcon = document.getElementById('img-cart');
 
 if (icon && text && link && logoutBtn) {
   if (loggedIn && username) {
@@ -69,6 +70,7 @@ if (icon && text && link && logoutBtn) {
     text.textContent = `Olá, ${username}`;
     link.href = 'user.html';
     logoutBtn.style.display = 'inline-block';
+    const cartIcon = document.getElementById('cart-icon');
 
     text.classList.add('text-syle');   // <- Aplica o estilo verde
     text.classList.remove('text-syle'); // <- Remove o estilo de login
@@ -78,8 +80,9 @@ if (icon && text && link && logoutBtn) {
     text.textContent = 'Login';
     link.href = 'user_login.html';
     logoutBtn.style.display = 'none';
+    cartIcon.style.display = 'none';
 
-     text.classList.add('text-syle');   // <- Aplica o estilo verde
+    text.classList.add('text-syle');   // <- Aplica o estilo verde
     text.classList.remove('text-syle'); // <- Remove o estilo de login
     
   }
@@ -89,4 +92,20 @@ function logout() {
   localStorage.removeItem('loggedIn');
   localStorage.removeItem('username');
   window.location.href = 'user_login.html';
+}
+
+//compra
+function comprarProduto(nome, preco, imagem) {
+  const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+  const itemExistente = carrinho.find(item => item.nome === nome);
+
+  if (itemExistente) {
+    itemExistente.quantidade += 1;
+  } else {
+    carrinho.push({ nome, preco, imagem, quantidade: 1 });
+  }
+
+  localStorage.setItem('carrinho', JSON.stringify(carrinho));
+  alert(`"${nome}" foi adicionado ao carrinho!`);
 }
