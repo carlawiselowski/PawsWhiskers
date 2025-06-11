@@ -4,57 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paws & Whiskers - user</title>
-    <link rel='stylesheet' type='text/css' media='screen' href='style_user.css'>
-   
-   <script>
-   function toggleItem(element) {
-        const item = element.parentElement;
-        item.classList.toggle("open");
-      }
-
-
-      const loggedIn = localStorage.getItem('loggedIn') === 'true';
-
-      if (!loggedIn) {
-        // Redireciona para login se não estiver logada
-        window.location.href = 'user_login.html';
-      }
-
-      document.getElementById('change-password-btn').onclick = () => {
-  const username = localStorage.getItem('username');
-  const currentPassword = document.getElementById('password').value;
-  const newPassword = document.getElementById('confirm_password').value;
-
-  fetch('/change-password', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ username, currentPassword, newPassword })
-  })
-  .then(res => res.text())
-  .then(alert)
-  .catch(err => alert('Erro: ' + err));
-};
-
-document.getElementById('delete-account-btn').onclick = () => {
-  const username = localStorage.getItem('username');
-  const password = prompt('Digite sua senha para confirmar:');
-
-  fetch('/delete-account', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ username, password })
-  })
-  .then(res => res.text())
-  .then(msg => {
-    alert(msg);
-    if (msg.includes('sucesso')) {
-      localStorage.clear();
-      window.location.href = 'user_login.html';
-    }
-  })
-  .catch(err => alert('Erro: ' + err));
-};
-      </script>    
+    <link rel='stylesheet' type='text/css' media='screen' href='style_user.css'> 
 
 </head>
 <body>
@@ -107,6 +57,59 @@ document.getElementById('delete-account-btn').onclick = () => {
               </div>
         </div>
     </div>
-    
+  
+
+       <script>
+   function toggleItem(element) {
+        const item = element.parentElement;
+        item.classList.toggle("open");
+      }
+
+
+      const loggedIn = localStorage.getItem('loggedIn') === 'true';
+
+      if (!loggedIn) {
+        // Redireciona para login se não estiver logada
+        window.location.href = 'user_login.html';
+      }
+
+
+      document.getElementById('change-password-btn').onclick = () => {
+  const username = localStorage.getItem('username');
+  const currentPassword = document.getElementById('password').value;
+  const newPassword = document.getElementById('confirm_password').value;
+
+  fetch('/change-password', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, currentPassword, newPassword })
+  })
+  .then(res => res.text())
+  .then(alert)
+  .catch(err => alert('Erro: ' + err));
+};
+
+document.getElementById('delete-account-btn').onclick = () => {
+  const username = localStorage.getItem('username');
+  const password = prompt('Digite sua senha para confirmar:');
+
+  fetch('/delete-account', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, password })
+  })
+  .then(res => res.text())
+  .then(msg => {
+    alert(msg);
+    if (msg.includes('sucesso')) {
+      localStorage.clear();
+      window.location.href = 'user_login.html';
+    }
+  })
+  .catch(err => alert('Erro: ' + err));
+};
+      </script>   
+      
 </body>
+
 </html>
