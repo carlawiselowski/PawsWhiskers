@@ -109,3 +109,4 @@ function comprarProduto(nome, preco, imagem) {
   localStorage.setItem('carrinho', JSON.stringify(carrinho));
   alert(`"${nome}" foi adicionado ao carrinho!`);
 }
+

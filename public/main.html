@@ -6,7 +6,7 @@
     <title>Paws & Whiskers</title>
     <link rel="stylesheet" href="style_main.css">
 </head>
-<body>
+<body onload="renderProdutos()">
 
     <div class="compras">
             <button class="cart" onclick="window.location.href='shop.html'">
@@ -61,62 +61,10 @@
 
         <div id="Products" class="tabcontent">     
             <div class="modeloproduto">   
-            <section class="container-animals">
-
-            <div align="center">
-                <img src="./animals/dogs/osso.jpeg">
-                <button class="product" onclick="comprarProduto('Osso', 9.90, './animals/dogs/osso.jpeg')">buy</button>
-                <button class="product">info</button>
-
-            </div>
-            
-            <div align="center">
-                <img src="./animals/cats/ratinho.jpeg">
-                <button class="product" onclick="comprarProduto('Ratinho de pelucia', 12.90, './animals/cats/ratinho.jpeg')">buy</button>
-                <button class="product">info</button>
-            </div>
-            
-            <div align="center">
-                <img src="./animals/others/bebedouro.jpeg">
-                <button class="product" onclick="comprarProduto('bebedouro', 89.90, './animals/others/bebedouro.jpeg')">buy</button>
-                <button class="product">info</button>
-            </div>
-    
-            <div align="center">
-                <img src="./animals/dogs/dog_food.jpeg">
-                <button class="product" onclick="comprarProduto('Ração para Cachorro', 99.90, './animals/dogs/dog_food.jpeg')">buy</button>
-                <button class="product">info</button>
-            </div>
-
-           
-            <div align="center">
-                <img src="./animals/cats/cat_food.jpeg">
-               <button class="product" onclick="comprarProduto('Ração para Gato', 59.90, './animals/cats/cat_food.jpeg')">buy</button>
-                <button class="product">info</button>
-            </div>
-
-            <div align="center">
-                <img src="./animals/others/roda.jpeg">
-                 <button class="product" onclick="comprarProduto('Roda', 29.90, './animals/others/roda.jpeg')">buy</button>
-                <button class="product">info</button>
-            </div>
-
-            <div align="center">
-                <img src="./animals/birds/gaiola.jpeg">
-                <button class="product" onclick="comprarProduto('Gaiola para Pássaros', 99.90, './animals/birds/gaiola.jpeg')">buy</button>
-                <button class="product">info</button>
-            </div>
-
-            <div align="center">
-                <img src="./animals/birds/bird_toy.jpeg">
-                   <button class="product" onclick="comprarProduto('Brinquedo para Pássaros', 19.90, './animals/birds/bird_toy.jpeg')">buy</button>
-                <button class="product">info</button>
-            </div>
-    
-        </div>
-            
+            <section class="container-animals" id="container-produtos">
             </section>
-        </div>
+    </div>
+</div>
 
         <div id="Info" class="tabcontent">
             <header> Who We Are</header> 
@@ -129,6 +77,7 @@
         <p>carlitia </p>
     </footer>
 
-<script src="script_main.js"></script>    
+<script src="script_main.js"></script> 
+<script src="cats.js"></script> 
 </body>
 </html>
