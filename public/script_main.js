@@ -68,13 +68,19 @@ if (icon && text && link && logoutBtn) {
   if (loggedIn && username) {
     icon.src = './img_geral/perfil.png';
     text.textContent = `Olá, ${username}`;
-    link.href = 'user.html';
-    logoutBtn.style.display = 'inline-block';
-    const cartIcon = document.getElementById('cart-icon');
 
-    text.classList.add('text-syle');   // <- Aplica o estilo verde
-    text.classList.remove('text-syle'); // <- Remove o estilo de login
-    
+    if (username.toLowerCase() === 'admin') {
+      link.href = 'admin.html';  // Admin vai para página admin
+      cartIcon.style.display = 'none'; // Esconde o carrinho para admin
+    } else {
+      link.href = 'user.html';   // Usuário comum
+      cartIcon.style.display = 'inline-block'; // Mostra carrinho para usuário comum
+    }
+
+    logoutBtn.style.display = 'inline-block';
+    text.classList.add('text-style');
+    text.classList.remove('login-style');
+
   } else {
     icon.src = './img_geral/perfil.png';
     text.textContent = 'Login';
@@ -82,11 +88,12 @@ if (icon && text && link && logoutBtn) {
     logoutBtn.style.display = 'none';
     cartIcon.style.display = 'none';
 
-    text.classList.add('text-syle');   // <- Aplica o estilo verde
-    text.classList.remove('text-syle'); // <- Remove o estilo de login
-    
+    text.classList.add('login-style');
+    text.classList.remove('text-style');
   }
 }
+
+
 
 function logout() {
   localStorage.removeItem('loggedIn');

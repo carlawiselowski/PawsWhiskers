@@ -97,3 +97,18 @@ app.post('/delete-account', (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
 });
+
+//relatorio de usuarios
+app.get('/users', (req, res) => {
+  console.log('📥 Requisição recebida em /users'); // 👈 adicione isso aqui
+
+  const query = 'SELECT name, username, email, address FROM users';
+
+  db.query(query, (err, results) => {
+    if (err) {
+      console.error('Erro ao buscar usuários:', err); // 👈 mostre o erro completo
+      return res.status(500).send('Erro ao buscar usuários.');
+    }
+    res.json(results);
+  });
+});

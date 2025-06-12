@@ -60,3 +60,40 @@ function deletarProduto() {
     renderProdutos();
 }
 
+//relatorio de usuarios
+function exibirInfoUsuario() {
+    fetch('/users')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Erro ao buscar usuários");
+            }
+            return response.json();
+        })
+        .then(usuarios => {
+            if (usuarios.length === 0) {
+                alert("Nenhum usuário cadastrado.");
+                return;
+            }
+
+            const container = document.querySelector('.container');
+            container.innerHTML = '<h3>Usuários Cadastrados</h3>';
+
+            usuarios.forEach(usuario => {
+                container.innerHTML += `
+            <div class="user-card">
+            <p><strong>Nome:</strong> ${usuario.name}</p>
+            <p><strong>Username:</strong> ${usuario.username}</p>
+            <p><strong>Email:</strong> ${usuario.email}</p>
+            <p><strong>Endereço:</strong> ${usuario.address}</p>
+            </div>
+`;
+
+            });
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            alert('Erro ao buscar usuários.');
+        });
+}
+
+
